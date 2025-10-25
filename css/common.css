@@ -1,0 +1,55 @@
+.users_manager {
+	margin: 0 auto;
+	max-width: 40rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.contain_users_list {
+	border-radius: 1rem;
+	overflow: hidden;
+	border: 2px solid rgb(95, 95, 95);
+}
+
+.users_list {
+	width: 100%;
+	background-color: oklch(0.7112 0.0934 230.61);
+	table-layout: auto;
+	border-collapse: collapse;
+	font-size: 1rem;
+	padding: 1.5rem 0;
+}
+
+.users_list>tbody>tr {
+	background-color: oklch(0.9743 0.0146 190.38);
+}
+
+.users_list>tbody>tr:nth-child(2n) {
+	background-color: oklch(0.9038 0.0146 190.38);
+}
+
+.users_list td,
+.users_list th {
+	padding: 0.5rem;
+}
+
+.users_list td:nth-child(n + 2):not(.list_items_button),
+.users_list th:nth-child(n + 2) {
+	border-left: 2px solid rgb(95, 95, 95);
+}
+
+.users_list tbody tr {
+	border-top: 2px solid rgb(95, 95, 95);
+}
+
+.users_list>thead>td {
+	padding: 0.5rem;
+}
+
+#search_users {
+	outline: none;
+	border-radius: 0.2rem;
+	border: 2px gray solid;
+	padding: 0.3rem;
+}
