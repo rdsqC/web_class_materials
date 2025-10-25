@@ -98,7 +98,7 @@ function createListRowElement(user) {
 
 let searchText = "";
 
-function renderList(listRowElements) {
+function renderList() {
 	while (usersListElement.firstChild) {
 		usersListElement.firstChild.remove();
 	}
@@ -116,11 +116,10 @@ function renderList(listRowElements) {
 	});
 }
 
-const listRowElements = users.map(user => createListRowElement(user));
-renderList(listRowElements);
+renderList();
 
 const serachBox = document.querySelector("#search_users");
 serachBox.addEventListener("input", event => {
 	searchText = event.target.value || "";
-	renderList(listRowElements);
+	renderList();
 });
