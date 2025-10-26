@@ -113,7 +113,7 @@ flowchart TB
 
 #### 開発環境を整える
 TypeScriptの実行はできましたがこのままでは、開発には不向きである。そのため、開発環境を整える必要がある。
-#### tsconfig.json の作成
+##### tsconfig.json の作成
 作業ディレクトリに `tsconfig.json` ファイルを追加する。
 このファイルは　`typescript`パッケージの設定を記述を行うためのファイルとなっている。
 ```
@@ -126,13 +126,15 @@ npx tsc --init
 {
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-	　"outDir": "./dist",    //追加する
-
-    // Environment Settings
-    //... (省略)
-  }
+    "module": "esnext",  //変更
+    "target": "esnext",
+    "types": [],
+	//...
+	}
 }
 ```
-これによって、```npx tsc``` コマンドを実行すると、`作業ディレクトリ\dist` にtsファイルのディレクトリ構成をそのままに保ちつつ、指定したディレクトリにjsファイルを作成するようになる。
+これによって、ブラウザ用にTSの変換が行われるようになる。  
+他にも`source_map`はブラウザ側でエラーが起こった時そのエラーが起きているTSの行を特定するかどうかの設定などデフォルトで複数の設定がなされた。
+
+##### テスト
+正常に変換が行われることを確かめるために、`console.log("hello, world!");` を `console.log("hello, tsconfig.json!");` と書き換え変換を実行しブラウザ側で変更が適応されるか確認する。
