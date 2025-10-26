@@ -13,11 +13,11 @@ npm -v
 11.4.1
 ```
 
-## 手順
+## TypeScriptの導入
 > [!NOTE]
 > **Node.js, npm のインストールは完了していることが前提です**
 
-### TypeScriptの導入
+### 手順
 1. コマンドを開きます。
 2. Cドライブ直下に`repositorys`ディレクトリりその中に`class5_the_second_half`ディレクトリを作成してください。
 	> [!NOTE]
@@ -55,7 +55,7 @@ npm -v
 	```
 	`package-lock.json` ファイルが作成されていることと、`node_modues` ディレクトリが追加されていることを確認する。
 
-### TypeScriptに触れる
+## TypeScriptに触れる
 今回はブラウザでJSに変換してから実行するTypeScriptに触れてもらう。
 開発からページへの反映の流れは  
 ```mermaid
@@ -65,11 +65,11 @@ flowchart TB
 	--> E[pathを使ってJavaScriptファイルを読み込む] --> F((読み込んだファイルを実行))
     
 ```
-#### HelloWorld
+### HelloWorld
 1. ファイルの作成  
 	作業ディレクトリに `app.ts`, `index.html` を追加。
 	
-	##### index.html
+	#### index.html
 	 ```
 	 <!DOCTYPE html>
 		<html lang="en">
@@ -91,19 +91,19 @@ flowchart TB
 	> `<script>` の `src属性` には **`app.js`** と書いてください。
 	> 実際にブラウザが読み込むのはJavaScriptファイルであって、あくまでTypeScriptをJavaScriptに変換したものだからです。
 
-	##### app.ts
+	#### app.ts
 	```
 	console.log("hello, world!");
 	```
 
 
 2. TypeScriptをJSに変換
-	##### この資料を書いたときの私のtypescriptパッケージバージョン
+	#### この資料を書いたときの私のtypescriptパッケージバージョン
 	```
 	npx tsc --version
 	Version 5.9.3
 	```
-	##### 変換
+	#### 変換
 	```
 	npx tsc app.ts
 	```
@@ -111,9 +111,9 @@ flowchart TB
 	好きなブラウザでhtmlファイルのpathを指定して開いてください。  
 	開発者ツールを開き`console`タブに hello, world! と出ていれば成功です。
 
-#### 開発環境を整える
+### 開発環境を整える
 TypeScriptの実行はできましたがこのままでは、開発には不向きである。そのため、開発環境を整える必要がある。
-##### tsconfig.json の作成
+#### tsconfig.json の作成
 作業ディレクトリに `tsconfig.json` ファイルを追加する。
 このファイルは　`typescript`パッケージの設定を記述を行うためのファイルとなっている。
 ```
