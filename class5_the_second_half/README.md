@@ -125,7 +125,7 @@ npx tsc --init
 作業ディレクトリ に `tsconfig.json` ファイルが作成されたことを確認する。
 
 次に `tsconfig.json` を以下のように編集。
-```json
+```ts
 {
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
