@@ -20,8 +20,8 @@ npm -v
 ### 手順
 1. コマンドを開きます。
 2. Cドライブ直下に`repositorys`ディレクトリりその中に`class5_the_second_half`ディレクトリを作成してください。
-	> [!NOTE]
-	> リポジトリのディレクトリが既にある人は飛ばしてください。
+> [!NOTE]
+> リポジトリのディレクトリが既にある人は飛ばしてください。
 	```cmd
 	cd C:\
 	mkdir repositorys\class5_the_second_half
@@ -39,11 +39,11 @@ npm -v
 	```cmd
 	npm init
 	```
-	> [!NOTE]
-	> 実行できない場合は、VSCodeでコマンドプロンプトを開きそこで実行してください。
+> [!NOTE]
+> 実行できない場合は、VSCodeでコマンドプロンプトを開きそこで実行してください。
 
-	> [!IMPORTANT]
-	> これをしないと `npm install` でpacageをインストールしたときにインストールされたパッケージの情報が `package.json` に記述されないので注意。
+> [!IMPORTANT]
+> これをしないと `npm install` でpacageをインストールしたときにインストールされたパッケージの情報が `package.json` に記述されないので注意。
 6. TypeScriptを動かすためのpackageをインストールする
 	```cmd
 	npm install typescript
@@ -90,9 +90,9 @@ flowchart TB
 
 		</html>
 	```
-	> [!NOTE]
-	> `<script>` の `src属性` には **`app.js`** と書いてください。
-	> 実際にブラウザが読み込むのはJavaScriptファイルであって、あくまでTypeScriptをJavaScriptに変換したものだからです。
+> [!NOTE]
+> `<script>` の `src属性` には **`app.js`** と書いてください。
+> 実際にブラウザが読み込むのはJavaScriptファイルであって、あくまでTypeScriptをJavaScriptに変換したものだからです。
 
 	#### app.ts
 	```ts
