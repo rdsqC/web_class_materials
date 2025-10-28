@@ -17,8 +17,6 @@
 	background-color: oklch(0.7112 0.0934 230.61);
 	table-layout: auto;
 	border-collapse: collapse;
-	font-size: 1rem;
-	padding: 1.5rem 0;
 }
 
 .users_list>tbody>tr {
@@ -34,17 +32,13 @@
 	padding: 0.5rem;
 }
 
-.users_list td:nth-child(n + 2):not(.list_items_button),
+.users_list td:nth-child(n + 2),
 .users_list th:nth-child(n + 2) {
 	border-left: 2px solid rgb(95, 95, 95);
 }
 
 .users_list tbody tr {
 	border-top: 2px solid rgb(95, 95, 95);
-}
-
-.users_list>thead>td {
-	padding: 0.5rem;
 }
 
 #search_users {
