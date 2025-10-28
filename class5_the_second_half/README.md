@@ -302,7 +302,7 @@ map.set("四羽 紫", 631);
 逆に代入演算子の左から右への型推論について見ていこう。
 **TypeScript**
 ```ts
-const: Array<string> = [];
+const array: Array<string> = [];
 const map: Map<string, number> = new Map();
 ```
 これらは**左辺の型が明確に決定されている**。そのため、代入演算子の左から右へ型推論が行われ、右辺の型が決定される。そのため、型アノテーションを省略することが可能となる。
