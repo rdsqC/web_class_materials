@@ -20,8 +20,8 @@ npm -v
 ### 手順
 1. コマンドを開きます。
 2. Cドライブ直下に`repositorys`ディレクトリりその中に`class5_the_second_half`ディレクトリを作成してください。
-	> [!NOTE]
-	> リポジトリのディレクトリが既にある人は飛ばしてください。
+> [!NOTE]
+> リポジトリのディレクトリが既にある人は飛ばしてください。
 	```cmd
 	cd C:\
 	mkdir repositorys\class5_the_second_half
@@ -39,11 +39,11 @@ npm -v
 	```cmd
 	npm init
 	```
-	> [!NOTE]
-	> 実行できない場合は、VSCodeでコマンドプロンプトを開きそこで実行してください。
+> [!NOTE]
+> 実行できない場合は、VSCodeでコマンドプロンプトを開きそこで実行してください。
 
-	> [!IMPORTANT]
-	> これをしないと `npm install` でpacageをインストールしたときにインストールされたパッケージの情報が `package.json` に記述されないので注意。
+> [!IMPORTANT]
+> これをしないと `npm install` でpacageをインストールしたときにインストールされたパッケージの情報が `package.json` に記述されないので注意。
 6. TypeScriptを動かすためのpackageをインストールする
 	```cmd
 	npm install typescript
@@ -90,9 +90,9 @@ flowchart TB
 
 		</html>
 	```
-	> [!NOTE]
-	> `<script>` の `src属性` には **`app.js`** と書いてください。
-	> 実際にブラウザが読み込むのはJavaScriptファイルであって、あくまでTypeScriptをJavaScriptに変換したものだからです。
+> [!NOTE]
+> `<script>` の `src属性` には **`app.js`** と書いてください。
+> 実際にブラウザが読み込むのはJavaScriptファイルであって、あくまでTypeScriptをJavaScriptに変換したものだからです。
 
 	#### app.ts
 	```ts
@@ -125,7 +125,7 @@ npx tsc --init
 作業ディレクトリ に `tsconfig.json` ファイルが作成されたことを確認する。
 
 次に `tsconfig.json` を以下のように編集。
-```json
+```ts
 {
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
@@ -302,7 +302,7 @@ map.set("四羽 紫", 631);
 逆に代入演算子の左から右への型推論について見ていこう。
 **TypeScript**
 ```ts
-const: Array<string> = [];
+const array: Array<string> = [];
 const map: Map<string, number> = new Map();
 ```
 これらは**左辺の型が明確に決定されている**。そのため、代入演算子の左から右へ型推論が行われ、右辺の型が決定される。そのため、型アノテーションを省略することが可能となる。
