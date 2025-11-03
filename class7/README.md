@@ -39,10 +39,28 @@
 
 ### Next.jsのセットアップ
  1. [Next.js公式 - Installation](https://nextjs.org/docs/app/getting-started/installation)の**Manual installation**の通りに実行してください。  
-#### **陥った問題** 'JSX.IntrinsicElements' が存在しない
+#### **陥った問題1** 'JSX.IntrinsicElements' が存在しない
  - JSX関連の型パッケージを追加でインストールする。ことで解決
   ```cmd
    npm i @types/node @types/react @types/react-dom
+  ```
+#### **陥った問題2** tsconfig.jsonでエラー　(moduleResolution)
+  - tsconfig.jsonでエラー　(moduleResolution)
+    tsconfig.jsonのcompilerOptionsに以下のように書き換える。ことで解決
+  ```json
+  moduleResolution: "bundler"
+  ```
+#### **陥った問題3** Set up Absolute Imports and Module Path Aliases でtypescritpのバージョンエラー
+ - 代わりに、tsconfig.jsonのcompilerOptionsに以下のように追記。
+  ```json 
+  "paths": {
+      "@app/*": [
+        "./app/*"
+      ],
+      "@component/*": [
+        "./component/*"
+      ],
+    },
   ```
 
 ## 参考文献
@@ -52,3 +70,4 @@
 - [React の流儀](https://ja.react.dev/learn/thinking-in-react)
 - [JSX.IntrinsicElements ts(7026) が存在しない場合の対処法 - zenn](https://zenn.dev/w4_3nd0/articles/af273a3496f8f3)
 - [【エラー】インターフェイス'JSX.IntrinsicElements'が存在しないため暗黙的にJSXの要素の型は'any'になります - Qiita](https://qiita.com/Akihiro0711/items/d223fe4aac4e92660dd0)
+- [Deprecate, remove support for `baseUrl` · Issue #62207 · microsoft/TypeScript](https://github.com/microsoft/TypeScript/issues/62207)
