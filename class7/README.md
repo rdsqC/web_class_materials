@@ -38,4 +38,17 @@
 それでは、始めましょう！
 
 ### Next.jsのセットアップ
- 1. [Next.js公式 - Installation](https://nextjs.org/docs/app/getting-started/installation)の**Manual installation**の通りに実行してください。
+ 1. [Next.js公式 - Installation](https://nextjs.org/docs/app/getting-started/installation)の**Manual installation**の通りに実行してください。  
+#### **陥った問題** 'JSX.IntrinsicElements' が存在しない
+ - JSX関連の型パッケージを追加でインストールする。ことで解決
+  ```cmd
+   npm i @types/node @types/react @types/react-dom
+  ```
+
+## 参考文献
+ - [Next.js公式ドキュメント](https://nextjs.org/docs)
+ - [Next.js公式 - Installation](https://nextjs.org/docs/app/getting-started/installation)
+- [UIの記述 - 章](https://ja.react.dev/learn/describing-the-ui)
+- [React の流儀](https://ja.react.dev/learn/thinking-in-react)
+- [JSX.IntrinsicElements ts(7026) が存在しない場合の対処法 - zenn](https://zenn.dev/w4_3nd0/articles/af273a3496f8f3)
+- [【エラー】インターフェイス'JSX.IntrinsicElements'が存在しないため暗黙的にJSXの要素の型は'any'になります - Qiita](https://qiita.com/Akihiro0711/items/d223fe4aac4e92660dd0)
