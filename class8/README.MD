@@ -30,27 +30,23 @@ firefox
 
 ### useState
 
-> **[useState – React](https://ja.react.dev/reference/react/useState)**  
+> **[useState – React](https://ja.react.dev/reference/react/useState)**  
 > useState は、コンポーネントに state 変数 を追加するための React フックです。  
 
 もっとも基本的なhook。ただほぼ全員が理解しているため今回説明は割愛.
 
 ### useRef
 
-> **[useRef - React](https://ja.react.dev/reference/react/useRef#avoiding-recreating-the-ref-contents)**  
+> **[useRef - React](https://ja.react.dev/reference/react/useRef#avoiding-recreating-the-ref-contents)**  
 > useRef は、レンダー時には不要な値を参照するための React フックです。  
->
-> ```typescript
-> import { useRef } from 'react';
-> ```
 
-> function MyComponent() {
->   const intervalRef = useRef(0);
->   const inputRef = useRef(null);
->   // ...
->
-> ```
-> ```
+```typescript
+import { useRef } from 'react';
+   function MyComponent() {
+   const intervalRef = useRef(0);
+   const inputRef = useRef(null);
+   // ...
+```
 
 useRefには大きく分けて2つの使い方がある。
 
